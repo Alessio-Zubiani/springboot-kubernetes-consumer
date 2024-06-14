@@ -41,6 +41,14 @@
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
+			<groupId>org.flywaydb</groupId>
+			<artifactId>flyway-core</artifactId>
+		</dependency>
+		<dependency>
+		    <groupId>org.flywaydb</groupId>
+		    <artifactId>flyway-mysql</artifactId>
+		</dependency>
+		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
@@ -93,7 +101,7 @@
 			                 		<targetDir>/app</targetDir>
 			                 		<inline>
 		                    			<id>copy-jar</id>
-			                    		<baseDirectory>/home/alessio/git_projects/springboot-kubernetes</baseDirectory>
+			                    		<baseDirectory>/home/alessio/git_projects/springboot-kubernetes-consumer</baseDirectory>
 			                    		<files>
 			                       			<file>
 			                          			<source>target/${project.artifactId}-${project.version}.jar</source>
@@ -108,8 +116,8 @@
 			                 		<port>8081</port>
 			              		</ports>
 			              		<env>
-          							<MYSQL_URL>jdbc:mysql://mysql:3306/springboot_kubernetes</MYSQL_URL>
-          							<MYSQL_USER>springboot_kubernetes</MYSQL_USER>
+          							<MYSQL_URL>jdbc:mysql://mysql:3306/consumer</MYSQL_URL>
+          							<MYSQL_USER>consumer</MYSQL_USER>
           							<MYSQL_PASSWORD>password</MYSQL_PASSWORD>
         						</env>
 			           		</build>
