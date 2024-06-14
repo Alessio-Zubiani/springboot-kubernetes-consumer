@@ -1,0 +1,17 @@
+server:
+  port: 8081
+  servlet:
+    context-path: /k8s-consumer
+
+spring:
+  application:
+    name: springboot-kubernetes-consumer
+  
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    show-sql: true
+  datasource:
+    url: ${MYSQL_URL}?allowPublicKeyRetrieval=true
+    username: ${MYSQL_USER}
+    password: ${MYSQL_PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
